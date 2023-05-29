@@ -1,0 +1,73 @@
+.heading {
+  font-family: var(--ff-sans-body);
+  font-size: var(--fs-750);
+  font-weight: 400;
+  color: var(--color-neutral-900);
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: var(--color-neutral-500);
+}
+
+.modalCopy,
+.serverError {
+  max-width: 20.25rem;
+  margin-top: 1.875rem;
+  font-weight: 400;
+}
+
+.serverError {
+  margin-top: 2.125rem;
+  color: var(--color-error-500);
+
+  &:empty {
+    height: 0;
+  }
+}
+
+.modalButton {
+  width: 100%;
+  max-width: 14.125rem;
+  margin: 0.875rem 0;
+  font-size: var(--fs-300);
+}
+
+.formContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3.125rem;
+  margin-bottom: 0.5rem;
+
+  &:first-of-type {
+    margin-top: 1rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.guestLogin {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.redirectCopy {
+  display: inline-block;
+}
+
+.redirect {
+  background: none;
+  border: none;
+  font-weight: 800;
+  color: var(--color-accent-500);
+  cursor: pointer;
+  padding-left: 0.2rem;
+}

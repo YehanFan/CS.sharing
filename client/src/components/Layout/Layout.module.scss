@@ -1,0 +1,26 @@
+@use "../../App.scss" as *;
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    max-width: 94rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-bottom: 3.625rem;
+
+    @include mq(large){
+        display: grid;
+        grid-template-columns: 5rem auto;
+        padding-bottom: 0;
+    }
+}
+
+.content {
+    display: flex;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

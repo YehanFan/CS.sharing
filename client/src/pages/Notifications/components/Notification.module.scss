@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-neutral-500);
+}
+
+.actor {
+    color: var(--color-neutral-700);
+    text-decoration: none;
+}
+
+.details {
+    font-size: var(--fs-300);
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.notificationLink {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: var(--color-neutral-700);
+    }
+}

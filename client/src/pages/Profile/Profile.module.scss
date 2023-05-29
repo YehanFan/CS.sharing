@@ -1,0 +1,70 @@
+@use "../../App.scss" as *;
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 43.25rem;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+
+  @include mq(medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0 0;
+  }
+}
+
+.headerInfoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.headerAvatar {
+  margin-right: 1.25rem;
+
+  @include mq(medium) {
+    display: none !important;
+  }
+}
+
+.headerName {
+  font-size: 1.5rem;
+
+  @include mq(medium) {
+    font-size: var(--fs-850);
+  }
+}
+
+.headerFollowers {
+  color: var(--color-neutral-500);
+
+  @include mq(medium) {
+    display: none;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.headerButton {
+  width: 100%;
+  margin-top: 1.25rem;
+
+  @include mq(medium) {
+    margin-top: 0;
+  }
+
+  @include mq(mediumplus){
+    display: none;
+  }
+}

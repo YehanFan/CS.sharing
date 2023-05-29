@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+
+// Media query
+@mixin mq($query) {
+  $size: map-get($breakpoints, $query);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Pseudo element
+@mixin pseudo(
+  $location: before,
+  $content: "",
+  $position: absolute,
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0
+) {
+  &::#{$location} {
+    content: $content;
+    position: $position;
+    @content;
+  }
+}
+
+//Screenreader Only
+@mixin sr-only() {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

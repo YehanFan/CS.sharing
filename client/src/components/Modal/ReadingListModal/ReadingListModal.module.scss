@@ -1,0 +1,34 @@
+@use "../../../App.scss" as *;
+
+.modalContainer {
+    max-width: 42.5rem;
+}
+
+.modal {
+    height: 100%;
+    max-width: 56.25rem;
+
+    @include mq(medium){
+        max-height: 32rem;
+    }
+}
+
+.innerContainer {
+    max-width: 400px;
+}
+
+.heading {
+    margin-bottom: 4rem;
+}
+
+.input {
+    width: 100%;
+    text-align: left;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}

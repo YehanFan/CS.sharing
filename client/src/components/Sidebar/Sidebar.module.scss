@@ -1,0 +1,23 @@
+@use "../../App.scss" as *;
+
+.container {
+  display: none;
+
+  @include mq(large) {
+    display: block;
+    min-width: 17.5rem;
+    padding: 0rem 2rem;
+    border-left: 1px solid var(--color-neutral-350);
+  }
+
+  @media (min-width: 77.5em) {
+    min-width: 24.625rem;
+  }
+}
+
+.content {
+  @include mq(large) {
+    position: sticky;
+    top: 0;
+  }
+}

@@ -1,0 +1,156 @@
+@use "../../App.scss" as *;
+
+.wrapper {
+  width: 100%;
+  padding: 0 1rem;
+
+  @include mq(medium){
+    padding: 0;
+  }
+}
+
+.container {
+  max-width: 43.25rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-neutral-700);
+}
+
+.headerButtonsContainer {
+  display: flex;
+  gap: .5rem;
+}
+
+.infoContainer {
+  display: flex;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.author {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: var(--color-neutral-700);
+  text-decoration: none;
+}
+
+.details {
+  display: flex;
+  font-size: var(--fs-300);
+  color: var(--color-neutral-500);
+}
+
+.bullet {
+  margin: 0 0.25rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  color: var(--color-neutral-700);
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.content {
+  margin-bottom: 3rem;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-500);
+  color: var(--color-neutral-700);
+
+  * {
+    margin-top: 0.5rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--ff-sans);
+    color: var(--color-neutral-700);
+  }
+
+
+  blockquote {
+    border-left: 5px solid #eee;
+    color: #666;
+    font-family: 'Hoefler Text', 'Georgia', serif;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 20px;
+  }
+
+  pre{
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    padding: 16px;  
+    position: relative;
+  }
+
+  
+
+
+  :where(h1, h2, h3, h4, h5, h6) + p,
+  :where(h1, h2, h3, h4, h5, h6) + p:empty + p {
+    margin-top: 0.5rem !important;
+  }
+
+  & > *:first-child {
+    margin: 0;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  li {
+    margin: 1rem 0 1rem 1.5rem;
+  }
+}
+
+.buttonContainer {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 2rem;
+  color: var(--color-neutral-500);
+}
+
+.button {
+  margin-right: .25rem;
+  color: var(--color-neutral-500);
+}
+
+
+.deleteButton {
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-error-500);
+  cursor: pointer;
+}

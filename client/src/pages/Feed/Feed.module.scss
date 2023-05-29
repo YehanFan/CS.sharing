@@ -1,0 +1,31 @@
+@use "../../App.scss" as *;
+
+.wrapper {
+  width: 100%;
+  padding-top: .5rem;
+
+  @include mq(large){
+    padding-top: 0;
+  }
+
+}
+
+.container {
+  max-width: 43.25rem;
+  margin: 0 auto;
+}
+
+.loader {
+  margin-top: 7rem;
+
+  @include mq(medium){
+    margin-top: 11.75rem;
+  }
+}
+
+.emptyFeed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

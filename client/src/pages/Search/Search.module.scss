@@ -1,0 +1,32 @@
+@use "../../App.scss" as *;
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 43.25rem;
+  margin: 0 auto;
+}
+
+.header {
+    margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+    font-size: 1.375rem;
+    color: var(--color-neutral-700);
+  
+    @include mq(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2.5rem 0 0;
+      font-size: var(--fs-850);
+    }
+  }
+
+.loader {
+  margin-top: 3.75rem;
+
+  @include mq(medium){
+    margin-top: 7.5rem;
+  }
+}

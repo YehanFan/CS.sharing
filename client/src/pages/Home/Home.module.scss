@@ -1,0 +1,140 @@
+@use "../../App.scss" as *;
+@use "../../components/Button/Button.module.scss" as *;
+
+.hero {
+  // background-color: #1a1a1a;
+  background-image: url('bg.jpg');
+  height: 100vh;
+  padding: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .heroContentWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  .heading,
+  .subheading,
+  .description,
+  .heroButton {
+    opacity: 0;
+    animation: fadeIn 2.5s ease forwards;
+    color: #fff;
+  }
+
+  .heading {
+    animation-delay: 0.5s;
+  }
+
+  .subheading {
+    animation-delay: 1.5s;
+  }
+
+  .description {
+    animation-delay: 2.0s;
+  }
+
+  .heroButton {
+    animation-delay: 2.5s;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.heroContentWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 75px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.subheading {
+  font-size: 36px;
+  font-weight: Normal;
+  color: #ccc;
+  margin-bottom: 48px;
+}
+
+.description {
+  font-size: 24px;
+  font-weight: Normal;
+  color: #ddd;
+  margin-bottom: 58px;
+}
+
+.heroButton {
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #888d94;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #7297d0;
+  }
+}
+
+.footer {
+  padding: 16px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; 
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  align-items: center; 
+}
+
+.footerContent {  
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.footerText {
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.heading {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.heroButton {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.footer {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+

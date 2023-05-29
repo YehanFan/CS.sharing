@@ -1,0 +1,47 @@
+%link {
+  display: inline-block;
+  position: relative;
+
+  &:last-of-type {
+    padding-bottom: 0.625rem;
+  }
+}
+
+.link {
+  @extend %link;
+
+  display: inline-block;
+  color: var(--color-neutral-500);
+  padding: 0.5rem;
+
+  &:last-of-type {
+    padding-bottom: 0.625rem;
+  }
+}
+
+.activeLink {
+  @extend %link;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+}
+
+.counter {
+  position: absolute;
+  bottom: 0;
+  right: -0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  padding: 0.4rem;
+  font-size: var(--fs-200);
+  background-color: var(--color-accent-500);
+  color: var(--color-neutral-100);
+  border-radius: 100%;
+  &:empty {
+    display: none;
+  }
+}

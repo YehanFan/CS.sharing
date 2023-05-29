@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+
+.ReactModalPortal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 normal forwards running open;
+}
+
+@keyframes open{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.ReactModal__Body--open {
+    .ReactModalPortal {
+        display: flex;
+    }
+}
+
+
+.ReactModal__Overlay {
+    background: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+    @include mq(medium){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+.ReactModal__Content {
+    position: relative;
+    cursor: initial;
+    width: 100%;
+
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 10px;
+
+    @include mq(medium){
+        width: 678px;
+        height: 100%;
+        max-height: 695px;
+    }
+}
+
+.ReactModal__Container {
+    height: 100%;
+    padding: 44px 56px;
+    max-width: 26.625rem;
+    margin: auto;
+    text-align: center;
+
+    @include mq(medium){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

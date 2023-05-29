@@ -1,0 +1,89 @@
+@use "../../App.scss" as *;
+
+.wrapper {
+  width: 100%;
+  padding: 0 1rem;
+
+  @include mq(medium){
+    padding: 0;
+  }
+}
+
+.container {
+  max-width: 43.25rem;
+  margin: 0 auto;
+}
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  
+  margin-top: 8rem;
+
+  @include mq(medium){
+    margin-top: 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-neutral-700);
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: var(--fs-500);
+  font-weight: 500;
+  color: var(--color-neutral-500);
+}
+
+.infoContainer {
+  display: flex;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.author {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: var(--color-neutral-700);
+  text-decoration: none;
+}
+
+.details {
+  display: flex;
+  font-size: var(--fs-300);
+  color: var(--color-neutral-500);
+}
+
+.bullet {
+  margin: 0 0.25rem;
+}
+
+.deleteButton {
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-error-500);
+  cursor: pointer;
+}
+
+.noItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+  border: 1px dashed hsl(0, 0%, 80%);
+  color: var(--color-neutral-500);
+}
